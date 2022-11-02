@@ -19,11 +19,20 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="5.0.11" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="5.0.2" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\SravansBooks.DataAccess\SravansBooks.DataAccess.csproj" />
     <ProjectReference Include="..\SravansBooks.Models\SravansBooks.Models.csproj" />
+    <ProjectReference Include="..\SravansBooks.Utility\SravansBooks.Utility.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Areas\Customers\Controllers\" />
+    <Folder Include="Areas\Customers\Data\" />
+    <Folder Include="Areas\Customers\Models\" />
+    <Folder Include="Areas\Customers\Views\" />
   </ItemGroup>
 
 </Project>
