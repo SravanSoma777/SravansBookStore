@@ -87,6 +87,6 @@
 -- Updated the Github Repository and commited with the Instructions given
 
 ======================================================================================
+1111 2022-11-03
 
-
-
+-- At line 45 used  in the configure method app.UseDatabaseErrorPage(); and changed it with app.UseMigrationsEndPoint(); and that seems to have resolved the problem
