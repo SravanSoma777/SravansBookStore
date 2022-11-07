@@ -122,3 +122,8 @@ and changed it with app.UseMigrationsEndPoint(); and that seems to have resolved
 		-List of categories
 		-Add Objects
 		-Remove Objects
+
+1816 2022-11-07
+
+-- Created a class file that implements the repository
+-- and modified the code to create the constructors and dependency injection
