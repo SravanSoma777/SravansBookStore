@@ -96,3 +96,29 @@ and changed it with app.UseMigrationsEndPoint(); and that seems to have resolved
 0550 2022-11-06
 
 -- As told Changed the Target framework from 5.0 to .netcore 3.1 and updated all their dependency packages. 
+==============================================================================================
+
+1632 2022-11-07
+
+-- starting now on part 2, built the project and there were no errors evrything is good. 
+-- Used this Command create migration using Package Manager Console
+			-add-migration AddDefaultIdentityMigration
+-- and updated database " update-database"
+-- created a new class file in models project and gave some properties
+-- added migration using this command in package manager console add-migration AddCategoryToDb
+-- the new migration file was empty
+-- in dataAccesss.data => application.dbcontext.cs added public DbSet<Category> Categories { get; set; } 
+-- then Removed migrations done previously to avoid duplication
+-- then added migration using the same command
+
+
+
+1749 2022-11-07
+
+-- Added A new folder in the DataAccess project naming it Repository and then created a new folder inside it called IRepository 
+-- Created an interface item called IRepository.cs
+-- Modified interface to use methods for CRUD
+		-Get item from the Db
+		-List of categories
+		-Add Objects
+		-Remove Objects
