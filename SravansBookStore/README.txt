@@ -127,3 +127,13 @@ and changed it with app.UseMigrationsEndPoint(); and that seems to have resolved
 
 -- Created a class file that implements the repository
 -- and modified the code to create the constructors and dependency injection
+
+1839 2022-11-07
+
+-- created individual repository for category and all potential models for the fututre
+		-- Categoryrepository.cs
+		and interface file ICategroyInterface.cs 
+
+-- Modified CategoryRepository.cs file with the using statements and methods pointing to ApplicationDbContext
+-- Modified ICategoryRepository interface with a update void method
+-- and updated the void method to retreive the first or default category object and pass the id as the generic entity which matches the category id
