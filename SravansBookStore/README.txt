@@ -190,3 +190,16 @@ The method or operation is not implemented.
 
 --Exception thrown while trying to create and update the category
 
+
+1520 2022-11-08
+
+--- tried to solve the exception for creating and updating but it doesnt show keeps on getting exception 
+-- went on and added HttpDelete API call in the categoryController.cs
+-- then implemented a delete method in categoru.js
+-- added the delete functionality in category.js with including the onclick event to the delete function
+-- Added the delete(url) function code
+-- After Adding Everything related to delete when built there is no error and when run there is no errors but when creating a category there is an error
+System.NotImplementedException: 'The method or operation is not implemented
+
+-- will work on it later
+
