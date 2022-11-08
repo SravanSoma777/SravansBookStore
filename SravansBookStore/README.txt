@@ -170,4 +170,5 @@ and changed it with app.UseMigrationsEndPoint(); and that seems to have resolved
 -- controller folder didn't have support for previewing so had to delete the folder and add a new one with the same name
 -- Added a new mvc controller-empty named CategoryController.cs in the controllers folder
 -- Modified the code to use the IunitOfWork from the .DataAccess project and the IRepository Folder
--- Added  a Category folder in the Admin/Views folder and created a new view called index.cshtml and modified with the code given
+-- Added  a Category folder in the Admin/Views folder and created a new view called index.cshtml and modified with the code given.
+-- and added a link to access this index file from the layout and put the link in the dropdown rather than nav
