@@ -172,3 +172,21 @@ and changed it with app.UseMigrationsEndPoint(); and that seems to have resolved
 -- Modified the code to use the IunitOfWork from the .DataAccess project and the IRepository Folder
 -- Added  a Category folder in the Admin/Views folder and created a new view called index.cshtml and modified with the code given.
 -- and added a link to access this index file from the layout and put the link in the dropdown rather than nav
+
+
+1150 2022-11-08
+-- Added a new item category.js and added return type code for the icons 
+-- in Index.cshtml with @setion Scripts use called the js file created 
+-- Added IActionResult code to the controller and Added a view and  added html to the new view 
+-- Created a partial view  in the general views/Shared folder called _CreateAndBackToList.cshtml and added the required code
+-- created another partial view for the EDIT| BACK in the same genral views/shared folder called _EditAndBackToListButton and
+Added the required code and addditonal @model razor statement too
+
+/////////*********************************************
+Errors exceptions to be handled
+---- System.NotImplementedException: 'The method or operation is not implemented
+----An exception of type 'System.NotImplementedException' occurred in SravansBooks.DataAccess.dll but was not handled in user code
+The method or operation is not implemented.
+
+--Exception thrown while trying to create and update the category
+

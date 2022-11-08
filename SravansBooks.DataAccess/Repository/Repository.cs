@@ -17,10 +17,12 @@ namespace SravansBooks.DataAccess.Repository
         public Repository(ApplicationDbContext db)
         {
             _db = db;
+           
         }
         public void Add(T entity)
         {
-            throw new NotImplementedException();
+            DbSet.Add(entity);
+            //throw new NotImplementedException();
         }
 
         public T Get(int id)
