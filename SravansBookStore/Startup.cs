@@ -7,6 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SravansBooks.DataAccess.Repository;
+using SravansBooks.DataAccess.Repository.IRepository;
 using SravansBookStore.DataAccess.Data;
 using System;
 using System.Collections.Generic;
@@ -32,6 +34,7 @@ namespace SravansBookStore
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddControllersWithViews();
             services.AddRazorPages();
         }

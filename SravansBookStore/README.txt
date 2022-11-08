@@ -137,3 +137,25 @@ and changed it with app.UseMigrationsEndPoint(); and that seems to have resolved
 -- Modified CategoryRepository.cs file with the using statements and methods pointing to ApplicationDbContext
 -- Modified ICategoryRepository interface with a update void method
 -- and updated the void method to retreive the first or default category object and pass the id as the generic entity which matches the category id
+
+
+1938 2022-11-07
+
+-- implemented a stored repository and map multiple repositories in a unit of work
+-- added a new interface in the IRespository folder called ISP_Call.cs that extends IDisposable
+-- Installed a nuget package called Dapper
+-- and included the methods shown in the the given file
+-- Added a new class in the repository folder called SP_Call.cs 
+-- added using statements and implemented interface ISP_Call
+-- Added A DB connection and updated using statements 
+
+
+2100 2022-11-07
+
+--Added a new interface to the IRespository folder called IUnitOfWork.cs and Updated it to be public and its code.
+-- Added a new class in Repository Folder called UnitofWork.cs and modified the code 
+-- And implemented the class with the interface 
+-- and in startup.cs file in the configureServices method addedthe following lines to make accessible by the project
+        --services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+-- Built the project, there were no errors everything is fine and running smooth.
