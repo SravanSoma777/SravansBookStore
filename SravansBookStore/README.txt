@@ -103,9 +103,11 @@ and changed it with app.UseMigrationsEndPoint(); and that seems to have resolved
 -- starting now on part 2, built the project and there were no errors evrything is good. 
 -- Used this Command create migration using Package Manager Console
 			-add-migration AddDefaultIdentityMigration
+			file name == 20221107214316_AddDefaultIdentityMigration.cs =>20221107214316_AddDefaultIdentityMigration.Designer.cs
 -- and updated database " update-database"
 -- created a new class file in models project and gave some properties
 -- added migration using this command in package manager console add-migration AddCategoryToDb
+-- Created migration file name is 20221107221342_AddCategoryToDb.cs => 20221107221342_AddCategoryToDb.Designer.cs
 -- the new migration file was empty
 -- in dataAccesss.data => application.dbcontext.cs added public DbSet<Category> Categories { get; set; } 
 -- then Removed migrations done previously to avoid duplication
@@ -159,3 +161,13 @@ and changed it with app.UseMigrationsEndPoint(); and that seems to have resolved
         --services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 -- Built the project, there were no errors everything is fine and running smooth.
+
+
+=========================================================================
+1032 2022-11-08
+
+-- Started Again with the project 2.3 Category CRUD
+-- controller folder didn't have support for previewing so had to delete the folder and add a new one with the same name
+-- Added a new mvc controller-empty named CategoryController.cs in the controllers folder
+-- Modified the code to use the IunitOfWork from the .DataAccess project and the IRepository Folder
+-- Added  a Category folder in the Admin/Views folder and created a new view called index.cshtml and modified with the code given
