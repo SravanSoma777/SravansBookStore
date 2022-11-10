@@ -15,7 +15,7 @@ namespace SravansBooks.DataAccess.Repository
         //Access the Database
         private readonly ApplicationDbContext _db;
         private static string ConnectionString = "";//needed to call the stored procedures
-        //Construcytor to open a sql database
+        //Constructor to open a sql database
         public SP_Call(ApplicationDbContext db)
         {
             _db = db;
@@ -30,10 +30,8 @@ namespace SravansBooks.DataAccess.Repository
         public void Execute(string procedurename, DynamicParameters param = null)
         {
             //throw new NotImplementedException();
-            using (SqlConnection sqlCon = new SqlConnection(ConnectionString)){
-                sqlCon.Open();
-                sqlCon.Execute(procedurename, param, commandType: System.Data.CommandType.StoredProcedure);
-            }
+            using SqlConnection sqlCon = new SqlConnection(ConnectionString); sqlCon.Open();
+            sqlCon.Execute(procedurename, param, commandType: System.Data.CommandType.StoredProcedure);
         }
 
         public IEnumerable<T> List<T>(string procedurename, DynamicParameters param = null)
