@@ -7,6 +7,8 @@
   <ItemGroup>
     <Compile Remove="Migrations\20221107220434_AddCategoryToDb.cs" />
     <Compile Remove="Migrations\20221107220434_AddCategoryToDb.Designer.cs" />
+    <Compile Remove="Migrations\20221110222510_initialCreate.cs" />
+    <Compile Remove="Migrations\20221110222510_initialCreate.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

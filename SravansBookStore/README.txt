@@ -203,3 +203,7 @@ System.NotImplementedException: 'The method or operation is not implemented
 
 -- will work on it later
 
+1739 2022-11-10
+
+--- built the project no errors but there is an exception 
+-- And Replaced The given repository.cs file with the current one 
