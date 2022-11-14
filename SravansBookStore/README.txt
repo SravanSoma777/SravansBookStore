@@ -207,4 +207,10 @@ System.NotImplementedException: 'The method or operation is not implemented
 
 --- built the project no errors but there is an exception 
 -- And Replaced The given repository.cs file with the current one 
--- Not Able to create a new category dont know why should look into it an dont have any errors just redirects to index page and does nothing
+-- Not Able to create a new category dont know why should look into it an dont have any errors
+just redirects to index page and does nothing.
+
+
+2131 2022-11-13
+
+-- in CategoryController.cs the HttpGet and HttpDelete API Calls did not get committed so had to do it again
