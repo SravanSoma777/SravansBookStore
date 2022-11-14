@@ -214,3 +214,15 @@ just redirects to index page and does nothing.
 2131 2022-11-13
 
 -- in CategoryController.cs the HttpGet and HttpDelete API Calls did not get committed so had to do it again
+-- Dont Know Whats happening, not able to create a Category and when clicked Create it redirects to index 
+and the category is not shown Working on it
+
+
+2022-11-14 1756
+
+-- Made some changes in UntiOFWork.cs file took out the void IUnitOfWork.Save(); method
+-- Changed src attritube from  <script src="/js/category.js"></script> to <script src="~/js/category.js"></script>
+-- In Upsert.cshtml file changed method from POST to post.
+-- Updated Category.js file on line 10 there was a spelling mistake "reder": function (data) { to  "render": function (data) {
+-- Built the project, there were no erorrs
+-- Created a Category successfully as directed, Updated it and deleted. Everything Works.

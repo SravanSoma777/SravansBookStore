@@ -1,16 +1,15 @@
 ﻿@model SravansBooks.Models.Category;
 @{
-    ViewData["Title"] = "Upsert";
     Layout = "~/Views/Shared/_Layout.cshtml";
     var title = "Create Category";
 }
 
 
-<form method="POST">
+<form method="post">
     <div class="row p-3 border">
         <div asp-validation-summary="ModelOnly" class="text-danger"></div>
         @if(Model.Id != 0)
-        {
+        { 
             title = "Edit Category";
         }
         <div class="col-12 border-bottom">

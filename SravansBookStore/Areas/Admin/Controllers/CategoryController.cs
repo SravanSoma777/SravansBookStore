@@ -54,8 +54,8 @@ namespace SravansBookStore.Areas.Admin.Controllers
                     {
                         _unitOfWork.Category.Update(category);
                     }
-                _unitOfWork.Save();
-                return RedirectToAction(nameof(Index));
+                    _unitOfWork.Save();
+                    return RedirectToAction(nameof(Index));
             }
             return View(category);
         }
