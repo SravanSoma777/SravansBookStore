@@ -33,7 +33,8 @@ namespace SravansBooks.DataAccess.Repository
             _db.SaveChanges();  // All changes will be saved when the save method is called at the parent level
         }
 
-        void IUnitOfWork.save()
+
+         void IUnitOfWork.Save()
         {
             _db.SaveChanges();
             //throw new NotImplementedException();
