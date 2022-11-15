@@ -98,9 +98,10 @@ and changed it with app.UseMigrationsEndPoint(); and that seems to have resolved
 -- As told Changed the Target framework from 5.0 to .netcore 3.1 and updated all their dependency packages. 
 ==============================================================================================
 
-1632 2022-11-07
+1632 2022-11-07 Starting PART 02
 
--- starting now on part 2, built the project and there were no errors evrything is good. 
+-- starting now on part 2, built the project and there were no errors everything is good.
+-- in appsettings.json changed my database connection "Server=(localdb)\\mssqllocaldb;/////Database=SravansBookStore////;Trusted_Connection=True;MultipleActiveResultSets=true"
 -- Used this Command create migration using Package Manager Console
 			-add-migration AddDefaultIdentityMigration
 			file name == 20221107214316_AddDefaultIdentityMigration.cs =>20221107214316_AddDefaultIdentityMigration.Designer.cs
@@ -111,7 +112,7 @@ and changed it with app.UseMigrationsEndPoint(); and that seems to have resolved
 -- the new migration file was empty
 -- in dataAccesss.data => application.dbcontext.cs added public DbSet<Category> Categories { get; set; } 
 -- then Removed migrations done previously to avoid duplication
--- then added migration using the same command
+-- then added migration using the same command add-migration AddCategoryToDb
 
 
 
@@ -195,7 +196,7 @@ The method or operation is not implemented.
 
 --- tried to solve the exception for creating and updating but it doesnt show keeps on getting exception 
 -- went on and added HttpDelete API call in the categoryController.cs
--- then implemented a delete method in categoru.js
+-- then implemented a delete method in category.js
 -- added the delete functionality in category.js with including the onclick event to the delete function
 -- Added the delete(url) function code
 -- After Adding Everything related to delete when built there is no error and when run there is no errors but when creating a category there is an error
