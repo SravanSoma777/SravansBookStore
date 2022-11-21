@@ -22,6 +22,10 @@ namespace SravansBooks.DataAccess.Repository
         {
             get; private set; //throw new NotImplementedException();
         }
+        public ICoverTypeRepository CoverTypeRepository
+        {
+            get; private set;
+        }
 
         public void Dispose()
         {

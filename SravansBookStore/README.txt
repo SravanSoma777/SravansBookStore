@@ -227,3 +227,9 @@ and the category is not shown Working on it
 -- Updated Category.js file on line 10 there was a spelling mistake "reder": function (data) { to  "render": function (data) {
 -- Built the project, there were no erorrs
 -- Created a Category successfully as directed, Updated it and deleted. Everything Works.
+
+////////////////////////////////////////////////////////////////////////////////
+
+Starting With PART 03
+////////////
+
