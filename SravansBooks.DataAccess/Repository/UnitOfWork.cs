@@ -21,16 +21,10 @@ namespace SravansBooks.DataAccess.Repository
         }
         public ICategoryRepository Category { get; private set; }// throw new NotImplementedException();
 
-        public ISP_Call SP_Call
-        {
-            get; private set; //throw new NotImplementedException();
-        }
+        public ISP_Call SP_Call {get; private set; }
         public IProductRepository Product { get; private set; }
       
-        public ICoverTypeRepository CoverType
-        {
-            get; private set;
-        }
+        public ICoverTypeRepository CoverType { get; private set;}
 
       //  IProductRepository IUnitOfWork.Product => throw new NotImplementedException();
 
