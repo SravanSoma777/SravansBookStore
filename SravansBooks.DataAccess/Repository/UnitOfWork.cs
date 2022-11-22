@@ -25,14 +25,14 @@ namespace SravansBooks.DataAccess.Repository
         {
             get; private set; //throw new NotImplementedException();
         }
-        public ProductRepository Product { get; private set; }
+        public IProductRepository Product { get; private set; }
       
         public ICoverTypeRepository CoverType
         {
             get; private set;
         }
 
-        IProductRepository IUnitOfWork.Product => throw new NotImplementedException();
+      //  IProductRepository IUnitOfWork.Product => throw new NotImplementedException();
 
 
         //ublic ICoverTypeRepository CoverTypeRePository => throw new NotImplementedException();
