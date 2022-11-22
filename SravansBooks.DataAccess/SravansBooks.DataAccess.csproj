@@ -13,6 +13,8 @@
     <Compile Remove="Migrations\20221121210645_addCoverTypeToDb.Designer.cs" />
     <Compile Remove="Migrations\20221121212435_AddCoverTypeToDb.cs" />
     <Compile Remove="Migrations\20221121212435_AddCoverTypeToDb.Designer.cs" />
+    <Compile Remove="Migrations\20221122012809_AddVaidationToProduct.cs" />
+    <Compile Remove="Migrations\20221122012809_AddVaidationToProduct.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
