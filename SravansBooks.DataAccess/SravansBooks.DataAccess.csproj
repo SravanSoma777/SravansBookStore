@@ -9,6 +9,10 @@
     <Compile Remove="Migrations\20221107220434_AddCategoryToDb.Designer.cs" />
     <Compile Remove="Migrations\20221110222510_initialCreate.cs" />
     <Compile Remove="Migrations\20221110222510_initialCreate.Designer.cs" />
+    <Compile Remove="Migrations\20221121210645_addCoverTypeToDb.cs" />
+    <Compile Remove="Migrations\20221121210645_addCoverTypeToDb.Designer.cs" />
+    <Compile Remove="Migrations\20221121212435_AddCoverTypeToDb.cs" />
+    <Compile Remove="Migrations\20221121212435_AddCoverTypeToDb.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
