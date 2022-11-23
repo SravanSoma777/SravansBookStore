@@ -233,3 +233,120 @@ and the category is not shown Working on it
 Starting With PART 03
 ////////////
 
+2022-11-21 1500
+
+-- Working on CoverType CRUD
+-- Created a CoverType.cs class file in models folder
+-- And delcared ID and Name properties same as the Category.cs properties
+-- Added CoverTypeRepository.cs class file to Repository folder
+-- Added ICoverTypeRepository.cs interface file to IRepository folder
+-- Added CoverType to IunitOfWork.cs Interface file ** ICoverTypeRepository CoverType { get; } **
+-- Implemented Interface and *** public ICoverTypeRepository CoverType { get; private set;} *** got generated
+-- In Data/ApplicationDbContext.cs added reference to CoverTypes using ****** public DbSet<CoverType> CoverTypes { get; set; }****
+-- And created migration using PMC with Command /////
+						add-migration AddCoverTypeToDb
+------ The generated migration file name with timestamp/////// 20221121212703_AddCoverTypeToDb.cs
+						and designer migration file name////// 20221121212703_AddCoverTypeToDb.Designer.cs
+-- And Updated Database
+
+2022-11-21 1800
+
+-- Added CoverType to navbar in file _layout.cshtml
+-- Added a new controller for CoverType called CoverTypeController
+-- Created a folder in Areas/Admin/Views called CoverType to add Index and Upsert view files
+-- Created a new view file called Index.cshtml to use DataTables and Copied the content from category/index file and edited it to match CoverType
+-- Created a new view file called Upset.cshtml to Create and Update DataTables of the Covertype
+-- created new JavaScript file called CoverType.js to retrieve the information of the datatables and display and Copied the javascript file of category and made changes to run with coverType
+-- made some changes in the bootstrap.css file to comply with the user experience 
+-- Added upsert, HttpGet, Httppost and API calls to the CoverTypeController file
+
+2022-11-21 1930 
+
+-- Working on Product CRUD 
+-- Added a new class file called Product.cs in the models folder
+-- Added Properties given in the file and made the class public
+-- Added Reference in the ApplicationDbContext.cs ///   public DbSet<Product> Products { get; set; }
+-- created migration using PMC with Command ////
+						add-migration AddProductToDb
+-- And Generated migration file name with timestamp ///// 20221122011530_AddProductToDb.cs
+								and designer filename///// 20221122011530_AddProductToDb.Designer.cs
+-- And Updated Database
+-- Reviewed the newly created Products table in the SQL Server Object Explorer
+-- Updated the Product.cs file with Validations as follows
+							- Made Title Required
+							- Made ISBN Required
+							- Made Author Required
+-- And Created a Migration using PMC with command////
+						add-migration AddValidationToDb 
+-- And Generated Migration filename with Timestamp ///// 20221122012015_AddValidaionToDb.cs
+						and designer migration file name/// 20221122012015_AddValidaionToDb.Designer.cs
+--And Updated database PMC Command update-database
+
+
+===========
+2022-11-21 2000
+
+-- Added Product to the Repository by
+	-Adding Interface called IProductRepository to IRepository
+	-Adding class file called ProductReposiotry to Repository folder and implemented the Interface  
+		and made Modifications given to the Update method in the ProductRepository.cs file
+	-Adding Product to the IUnitOfWork // IProductRepository Product { get; }
+	-And Implementing the IunitOfWork Interface generated  //public IProductRepository Product { get; private set; }
+-- Built and Checked, there were no errors
+
+============
+2022-11-21 2030
+
+-- Added ProductController.cs in Areas/Admin/Controllers folder to perform CRUD operations
+-- Added the IWebHostEnvironment call and added using statement AspNetCore.Hosting for it to work
+-- Created a View Model in the models folder to hold the product object called ProductVM.cs and created select list for Category and CoverType
+-- Modified the ProductVM to be public and Installed the Microsoft.AspNetCore.Mvc.ViewFeatures package
+-- Modifed the ProductController so the IActionResult Upsert calls to the ProductVM and included the using statement to viewModels folder and Microsoft.AspNetCore.Rendering
+-- Commented the Upsert Post method
+-- Modified the API call to include Category and CoverType properties
+-- Added an index view file in the Areas/Admin/Views/Product folder called Index.cshtml
+-- Copied and pasted the index file of the Category and made modificaions to run for the Product
+-- Created a new product.js file to use Datatables
+-- Copied and pasted the category.js file in the Product.js file and made modifications like url and columns to run for the Product
+-- Modified the _layout.cshtml to add new link to the Product in the DropDown
+-- Built and checked, no Build Erorrs
+-- Ran the Application 
+-- there is an sql error but the slide said it was okay and we were going to solve maybe in the next slide 
+
+
+===========
+2022-11-21 2130
+
+
+-- Created a view file named  Upsert.cshtml in the Product views folder
+-- And Modified the Upsert file with the given Upsert file from the Assignmetnnt 2 files
+-- Added a rich textBox inside Product with tiny.cloud using the API and added a function validateInput() and if empty, displays a sweet alert
+				 <script>
+						tinymce.init({
+							selector: 'textarea',
+							plugins: 'lists',
+							menubar: 'file edit format'
+						});
+						function validateInput() {
+							if (document.getElementById("uploadBox").value == "") {
+								swal("Error", "Please select an image", "error");
+								return false;
+							}
+							return true;
+						}
+						<script src="https://cdn.tiny.cloud/1/n94ifuzvl80pchikopiwgz2esrw8n28dwcywvpejlqrregfp/tinymce/5/tinymce.min.js">
+				 </script>
+
+-- Built the Application there were no errors
+-- Ran the application
+-- When selected create new product form appeared to create product but not able create it actually. where is goes to the Repository file and return query.ToList(); is empty
+-- Added a new folder in wwwrooot folder called images and a subfolder to the images called Products
+-- In the productController Uncommented the method post upsert  and modifed the ProductController with the given file
+-- Built and checked for erorrs, there were no errors 
+-- Ran the Application to create a Product, filled everything and it didnt let me create a product and threw a user handled exception saying that the path given is wrong or not found/
+
+				/////////System.IO.DirectoryNotFoundException: 'Could not find a part of the path 'C:\images\products\536f7c52-9abb-4e08-875b-9a3dbaafa793.jpg'.'
+--///////// then Had to create a new file in the c:// local path of the computer called images/Products and place the image in there
+-- So, it made me add the category but there is no sign of picture added, cant see the picture anywhere in the table and if no picture is selected while adding the product there is a warning
+
+
