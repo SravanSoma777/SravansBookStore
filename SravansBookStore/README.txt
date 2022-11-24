@@ -344,7 +344,7 @@ Starting With PART 03
 -- In the productController Uncommented the method post upsert  and modifed the ProductController with the given file
 -- Built and checked for erorrs, there were no errors 
 -- Ran the Application to create a Product, filled everything and it didnt let me create a product and threw a user handled exception saying that the path given is wrong or not found/
-
+-- and one more thing was that the category list and CoverType Dropdown list were showing the same list as Category so had to change the Dropdown list to CoverTypeList and CoverTypeId for the coverType to be shown 
 				/////////System.IO.DirectoryNotFoundException: 'Could not find a part of the path 'C:\images\products\536f7c52-9abb-4e08-875b-9a3dbaafa793.jpg'.'
 --///////// then Had to create a new file in the c:// local path of the computer called images/Products and place the image in there
 -- So, it made me add the category but there is no sign of picture added, cant see the picture anywhere in the table and if no picture is selected while adding the product there is a warning
