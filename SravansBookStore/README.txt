@@ -350,3 +350,86 @@ Starting With PART 03
 -- So, it made me add the category but there is no sign of picture added, cant see the picture anywhere in the table and if no picture is selected while adding the product there is a warning
 
 
+=============================================
+starting with PART 4
+=====================
+
+2022-11-30 1400
+
+-- Started with pulling the repository given for the part-4 to compare from the github
+-- added local database and updated database in package manager console
+-- built and run the given project and while creating a product there were three more kinds of prices
+--// In Models/Product.cs added three more properties of price -
+						
+						[Required]
+						[Range(1, 10000)]
+						public double Price { get; set; }
+						[Required]
+						[Range(1, 10000)]
+						public double Price50 { get; set; }
+						[Required]
+						[Range(1, 10000)]
+						public double Price100 { get; set; }
+
+--// And in package manager console used add-migration command -
+					used this command to add those validations and new fields 
+							// add-migration AddNewValidationToProduct
+					and file name created by running it is /////////// 20221130161723_AddNewValidationToProduct.cs
+							/////////20221130161723_AddNewValidationToProduct.designer.cs
+
+==============
+2022-11-30 1425
+
+--// In ProductRepository.cs file added new properties and validations to the repository
+					
+					objFromDb.Price = product.Price;
+					objFromDb.Price50 = product.Price50;
+					objFromDb.Price100 = product.Price100;
+
+--//And in Utility/SD.cs file added the differences
+					public const string Proc_CoverType_Create = "usp_CreateCoverType";
+					public const string Proc_CoverType_Get = "usp_GetCoverType";
+					public const string Proc_CoverType_GetAll = "usp_GetCoverTypes";
+					public const string Proc_CoverType_Update = "usp_UpdateCoverType";
+					public const string Proc_CoverType_Delete = "usp_DeleteCoverType";
+
+--// In Product/Upsert.cshtml file added fields for the new properties to enter-
+								
+								<div class="form-group row">
+									<div class="col-4">
+										<label asp-for="Product.Price"></label>
+									</div>
+									<div class="col-8">
+										<input asp-for="Product.Price" class="form-control" />
+										<span asp-validation-for="Product.Price" class="text-danger"></span>
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="col-4">
+										<label asp-for="Product.Price50"></label>
+									</div>
+									<div class="col-8">
+										<input asp-for="Product.Price50" class="form-control" />
+										<span asp-validation-for="Product.Price50" class="text-danger"></span>
+									</div>
+								</div>
+								<div class="form-group row">
+									<div class="col-4">
+										<label asp-for="Product.Price100"></label>
+									</div>
+									<div class="col-8">
+										<input asp-for="Product.Price100" class="form-control" />
+										<span asp-validation-for="Product.Price100" class="text-danger"></span>
+									</div>
+								</div>
+///////////
+===
+2022-11-30 1437
+
+--// In Areas/Customers/HomeController.cs file made changes to match the file from the given repo
+--// built and run the app 
+--// Added same images folder and images inside the folder from the given repository
+--// In Index.cshtml file made chnages to display product on the home page of the application and made changes to match the given file
+--// Built the App, Added three Products
+								
+				

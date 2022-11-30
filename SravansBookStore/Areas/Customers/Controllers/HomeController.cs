@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using SravansBooks.DataAccess.Repository.IRepository;
+using Microsoft.AspNetCore.Mvc;
+using SravansBooks.Models;
 using Microsoft.Extensions.Logging;
 using SravansBookStore.Models;
 using SravansBookStore.Models.ViewModels;
@@ -14,15 +16,18 @@ namespace SravansBookStore.Areas.Customers.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, IUnitOfWork unitOfWork)
         {
             _logger = logger;
+            _unitOfWork = unitOfWork;
         }
 
         public IActionResult Index()
         {
-            return View();
+            IEnumerable<Product> productList = _unitOfWork.Product.GetAll(includeProperties: "Category,CoverType");
+            return View(productList);
         }
 
         public IActionResult Privacy()
